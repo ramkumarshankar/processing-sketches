@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Processing.js test</title>
+  <script src="./lib/processing-1.4.8.js"></script>
+</head>
+<body>
+  <canvas id="myCanvas" data-processing-sources="generativelines.js"></canvas>
+  <a id="downloadLink" download="GenerativeLines.jpg">Download as image</a>
+</body>
+<script>
+  function download() {
+    myCanvas = document.getElementById('myCanvas');
+    var dt = myCanvas.toDataURL('image/jpeg');
+    this.href = dt;
+  };
+  downloadLink.addEventListener('click', download, false);
+</script>
+</html
